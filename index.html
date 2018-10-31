@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовое задание</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     
+   
+<div class="container">
+<table id="table" border="1px;" style="display: none">
+          <thead>
+              <td>Дата</td>
+              <td>Кто сделал коммит</td>
+              <td>Ссылка</td>
+              <td>Подробнее</td>
+          </thead>
+          <tbody>
+            
+          </tbody>
+           
+       </table>
+<div class="inputForm">
+    <div class="row">
+      <div class="col-25">
+        <label for="login">Логин на github</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="login" name="login" placeholder="Логин.." value="kenodo">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="repo">Репозиторий</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="repo" name="repo" placeholder="Название репозитория.." value="kenodo.github.io">
+      </div>
+    </div>
+    
+    <div class="row">
+      <input id="btn" type="submit" value="Посмотреть">
+    </div> 
+</div>
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p class="text"></p>
+  </div>
+
+</div>
+   
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>  
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+<script src="main.js"></script>
+
+    
+</body>
+</html>
+ 
+
+ 
+ 
+ 
