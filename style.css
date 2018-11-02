@@ -33,8 +33,9 @@ html, body {
        }
        
        .modal {
-    display: none; 
-    position: fixed; 
+  
+    display: none;
+    position: fixed;            
     z-index: 1; 
     left: 0;
     top: 0;
@@ -71,7 +72,8 @@ html, body {
        
 
 input[type=text], select, textarea {
-    width: 100%;
+    width:90%;
+    float:right;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -84,7 +86,7 @@ label {
 }
 
 input[type=submit] {
-    background-color: #4CAF50;
+    background-color: #3e3e3e;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -101,7 +103,7 @@ input[type=submit] {
        }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: black;
 }
 
 .col-25 {
@@ -127,9 +129,45 @@ input[type=submit]:hover {
     clear: both;
 }
 
-@media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
+
+.spinner {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+@media screen and (max-width: 890px) {
+    .col-25, .col-75 {
         width: 100%;
         margin-top: 0;
+    }
+    input[type=submit]{
+        margin-top:20px;
+        width:100%;
+        float:none;
     }
 }

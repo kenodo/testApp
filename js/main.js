@@ -2,6 +2,7 @@
   var responseObj;
     
   function printRepos() {
+  $(".inputForm").hide();
   $("#table").show();
   var table = $('#table').DataTable();
   responseObj = JSON.parse(this.responseText);
@@ -55,8 +56,6 @@
             
             $(".text4").text('Хеш коммита: ' + a.sha);
             $(".text5").text('Ссылка на коммит: ' + a.url);
-            
-            
             $("#myModal").show();
             
         }
@@ -76,7 +75,9 @@
       console.log(repo);
        makeRequest(login, repo);
       //var table = $('#table').DataTable();
-      $(".inputForm").hide();
+      $(".inputForm .content").hide();
+      $(".inputForm .spinner").show();
+      //$(".")
   });
     
     
